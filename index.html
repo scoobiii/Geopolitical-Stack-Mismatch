@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geopolitical Stack Mismatch: Marco Rubio e o Colapso da Arquitetura Trumpiana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #e2e8f0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            border-bottom: 3px solid #f59e0b;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            background: rgba(15, 23, 42, 0.7);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            color: #fbbf24;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .meta {
+            font-size: 0.9em;
+            color: #94a3b8;
+            font-style: italic;
+        }
+        
+        nav {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(51, 65, 85, 0.6);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        nav a:hover {
+            background: #f59e0b;
+            color: #0f172a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(245, 158, 11, 0.4);
+        }
+        
+        section {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            border-left: 4px solid #f59e0b;
+            backdrop-filter: blur(5px);
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            color: #fbbf24;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        h3 {
+            font-size: 1.6em;
+            color: #fcd34d;
+            margin: 30px 0 20px 0;
+        }
+        
+        h4 {
+            font-size: 1.3em;
+            color: #fde68a;
+            margin: 20px 0 15px 0;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: rgba(220, 38, 38, 0.15);
+            border-left: 4px solid #dc2626;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: rgba(34, 197, 94, 0.15);
+            border-left: 4px solid #22c55e;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: rgba(245, 158, 11, 0.15);
+            border-left: 4px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: rgba(51, 65, 85, 0.5);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        
+        .card h4 {
+            margin-top: 0;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+        }
+        
+        .osi-stack {
+            background: rgba(15, 23, 42, 0.8);
+            border: 2px solid #475569;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+        
+        .osi-layer {
+            padding: 20px;
+            border-bottom: 1px solid #475569;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .osi-layer:hover {
+            background: rgba(245, 158, 11, 0.1);
+        }
+        
+        .osi-layer:last-child {
+            border-bottom: none;
+        }
+        
+        .layer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .layer-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fbbf24;
+        }
+        
+        .mismatch-critical {
+            background: #dc2626;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .mismatch-high {
+            background: #f97316;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .mismatch-moderate {
+            background: #eab308;
+            color: #0f172a;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .layer-details {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #475569;
+        }
+        
+        .layer-details.active {
+            display: block;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(15, 23, 42, 0.6);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #475569;
+        }
+        
+        th {
+            background: rgba(51, 65, 85, 0.8);
+            color: #fbbf24;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: rgba(245, 158, 11, 0.05);
+        }
+        
+        .scenario-card {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border: 2px solid #475569;
+        }
+        
+        .scenario-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .scenario-title {
+            font-size: 1.4em;
+            color: #fbbf24;
+        }
+        
+        .probability-high {
+            background: #dc2626;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        
+        .probability-medium {
+            background: #f97316;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        
+        .probability-low {
+            background: #eab308;
+            color: #0f172a;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 25px;
+            background: rgba(51, 65, 85, 0.6);
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #fbbf24;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 0.95em;
+            color: #cbd5e1;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 2px solid #475569;
+            color: #94a3b8;
+            font-size: 0.9em;
+        }
+        
+        .citation {
+            font-style: italic;
+            color: #fde68a;
+            padding: 20px;
+            margin: 20px 0;
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #fbbf24;
+            border-radius: 4px;
+        }
+        
+        strong {
+            color: #fde68a;
+        }
+        
+        em {
+            color: #a5f3fc;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 25px;
+            }
+            
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚠️ Geopolitical Stack Mismatch</h1>
+            <p class="subtitle">Marco Rubio, Arquitetura Trumpiana e o Colapso Sistêmico da Supremacia Centralizada</p>
+            <p class="meta">Working Paper v2.1 — Dezembro 2024 | Modelo OSI aplicado à Geopolítica</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#intro">Introdução</a></li>
+                <li><a href="#stack">Stack OSI</a></li>
+                <li><a href="#rubio">Fator Rubio</a></li>
+                <li><a href="#scenarios">Próximas Cagadas</a></li>
+                <li><a href="#gtd">Technical Debt</a></li>
+                <li><a href="#brasil">Brasil</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </nav>
+        
+        <section id="intro">
+            <h2>1. A Hipótese Central</h2>
+            
+            <div class="highlight-box">
+                <h3>Tese Principal</h3>
+                <p><strong>Trump não arquitetou o erro geopolítico — foi acoplado nele.</strong></p>
+                <p>A política externa trumpiana foi <em>terceirizada</em> para assessores ideológicos com trauma histórico mal resolvido. <strong>Marco Rubio</strong> representa perfeitamente esse vetor: diáspora cubana, Guerra Fria congelada no tempo, anticomunismo como identidade.</p>
+            </div>
+            
+            <h3>Trump como Executor, Não Estrategista</h3>
+            <p>Trump não é arquiteto de sistemas. Ele é:</p>
+            <ul>
+                <li><strong>Executor instintivo</strong> — reage rápido, decide por intuição</li>
+                <li><strong>Comunicador agressivo</strong> — domina narrativa, não substância</li>
+                <li><strong>Operador de símbolos</strong> — teatro político, não engenharia</li>
+            </ul>
+            
+            <p>Sua política externa foi delegada a ideólogos que trouxeram bagagem do século XX para enfrentar realidade do século XXI.</p>
+            
+            <h3>Dados Empíricos (2022-2024)</h3>
+            <div class="grid-2">
+                <div class="stat-box">
+                    <span class="stat-number">10.500+</span>
+                    <span class="stat-label">Veículos russos destruídos na Ucrânia<br>(30-40% por drones FPV $400-1.500)</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">34%</span>
+                    <span class="stat-label">Frota russa do Mar Negro destruída<br>Ucrânia sem marinha operacional</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100-1000x</span>
+                    <span class="stat-label">Assimetria custo-efetividade<br>FPV vs sistemas convencionais</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">$750M</span>
+                    <span class="stat-label">Moskva afundou por $2M em mísseis<br>Ratio: 375x desfavorável</span>
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h4 style="color: #ef4444;">O Mundo de Rubio</h4>
+                    <ul>
+                        <li>Estado centralizado como ameaça</li>
+                        <li>Sanções como arma universal</li>
+                        <li>Moralização do conflito</li>
+                        <li>Inimigos claramente definidos</li>
+                        <li>Força simbólica intimida</li>
+                        <li>Dissuasão funciona</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 style="color: #22c55e;">A Realidade Material</h4>
+                    <ul>
+                        <li>Força distribuída em rede</li>
+                        <li>Custo marginal → zero</li>
+                        <li>Ideologia irrelevante</li>
+                        <li>Atribuição impossível</li>
+                        <li>Saturação vence qualidade</li>
+                        <li>Dissuasão obsoleta</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h4>O Erro de Arquitetura</h4>
+                <p>Rubio conectou Trump a um <strong>stack geopolítico incompatível</strong> com o hardware do século XXI. É como rodar Windows 95 em servidor moderno — compila, mas não escala.</p>
+                <p class="citation">"Anticomunismo não derruba enxame. Drones só precisam de: energia, coordenada, link."</p>
+            </div>
+        </section>
+        
+        <section id="stack">
+            <h2>2. Modelo OSI Geopolítico</h2>
+            
+            <p>A arquitetura de poder pode ser modelada como um stack de 7 camadas, similar ao modelo OSI de redes. O <strong>Geopolitical Stack Mismatch (GSM)</strong> ocorre quando as camadas superiores (política, narrativa) operam com pressupostos incompatíveis com as camadas inferiores (hardware, física).</p>
+            
+            <div class="osi-stack">
+                <div class="osi-layer" onclick="toggleLayer(this)">
+                    <div class="layer-header">
+                        <div>
+                            <div class="layer-title">Camada 7 — Política Externa</div>
+                            <div style="font-size: 0.9em; color: #94a3b8; margin-top: 5px;">Application Layer</div>
+                        </div>
+                        <span class="mismatch-critical">CRÍTICO</span>
+                    </div>
+                    <div class="layer-details">
+                        <div class="grid-2">
+                            <div>
+                                <strong style="color: #ef4444;">LEGACY (Rubio/Trump):</strong>
+                                <p>Teatro | Discurso | Sanções | Intimidação verbal | Pressão econômica</p>
+                            </div>
+                            <div>
+                                <strong style="color: #22c55e;">DISTRIBUTED (Realidade):</strong>
+                                <p>Iteração | Aprendizado contínuo | Runtime adaptativo | Guerra como software</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #475569;">
+                            <strong style="color: #fbbf24;">ERRO DE RUBIO:</strong> Sanções como arma universal — pressupõe que Estados funcionam como Cuba 1960 (centralizados, dependentes, intimidáveis)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="osi-layer" onclick="toggleLayer(this)">
+                    <div class="layer-header">
+                        <div>
+                            <div class="layer-title">Camada 6 — Narrativa</div>
+                            <div style="font-size: 0.9em; color: #94a3b8; margin-top: 5px;">Presentation Layer</div>
+                        </div>
+                        <span class="mismatch-high">ALTO</span>
+                    </div>
+                    <div class="layer-details">
+                        <div class="grid-2">
+                            <div>
+                                <strong style="color: #ef4444;">LEGACY:</strong>
+                                <p>Mídia tradicional | Diplomacia formal | Conferências de imprensa | Narrativa controlada</p>
+                            </div>
+                            <div>
+                                <strong style="color: #22c55e;">DISTRIBUTED:</strong>
+                                <p>Telegram | GitHub da guerra | Vídeo cru | Disseminação instantânea | Sem filtros</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #475569;">
+                            <strong style="color: #fbbf24;">ERRO DE RUBIO:</strong> Moralização ideológica — tenta enquadrar conflito técnico em termos morais (comunismo vs liberdade)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="osi-layer" onclick="toggleLayer(this)">
+                    <div class="layer-header">
+                        <div>
+                            <div class="layer-title">Camada 5 — Controle</div>
+                            <div style="font-size: 0.9em; color: #94a3b8; margin-top: 5px;">Session Layer</div>
+                        </div>
+                        <span class="mismatch-high">ALTO</span>
+                    </div>
+                    <div class="layer-details">
+                        <div class="grid-2">
+                            <div>
+                                <strong style="color: #ef4444;">LEGACY:</strong>
+                                <p>Hierarquia rígida | Autoridade central | Cadeia de comando | Responsabilidade pessoal</p>
+                            </div>
+                            <div>
+                                <strong style="color: #22c55e;">DISTRIBUTED:</strong>
+                                <p>Operadores intercambiáveis | Sessões descartáveis | Zero apego ao ativo | Rotatividade</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #475569;">
+                            <strong style="color: #fbbf24;">ERRO DE RUBIO:</strong> Cadeia de comando rígida — incapaz de aceitar que operador de drone em casa = soldado profissional
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="osi-layer" onclick="toggleLayer(this)">
+                    <div class="layer-header">
+                        <div>
+                            <div class="layer-title">Camada 4 — Transporte</div>
+                            <div style="font-size: 0.9em; color: #94a3b8; margin-top: 5px;">Transport Layer</div>
+                        </div>
+                        <span class="mismatch-critical">CRÍTICO</span>
+                    </div>
+                    <div class="layer-details">
+                        <div class="grid-2">
+                            <div>
+                                <strong style="color: #ef4444;">LEGACY:</strong>
+                                <p>Ativos caros | Baixa tolerância a perdas | Trauma político com casualties | Plataformas únicas</p>
+                            </div>
+                            <div>
+                                <strong style="color: #22c55e;">DISTRIBUTED:</strong>
+                                <p>Saturação | Perda aceitável (30-40%) | Reposição rápida | Throughput > qualidade</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #475569;">
+                            <strong style="color: #fbbf24;">ERRO DE RUBIO:</strong> Trauma com casualties — democracia sensível a perdas não compete com ator que aceita atrito barato
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="osi-layer" onclick="toggleLayer(this)">
+                    <div class="layer-header">
+                        <div>
+                            <div class="layer-title">Camada 3 — Rede</div>
+                            <div style="font-size: 0.9em; color: #94a3b8; margin-top: 5px;">Network Layer</div>
+                        </div>
+                        <span class="mismatch-critical">CRÍTICO</span>
+                    </div>
+                    <div class="layer-details">
+                        <div class="grid-2">
+                            <div>
+                                <strong style="color: #ef4444;">LEGACY:</strong>
+                                <p>Estados-nação identificáveis | Retaliação direta | Capital, bandeira, líder | Endereço IP claro</p>
+                            </div>
+                            <div>
+                                <strong style="color: #22c55e;">DISTRIBUTED:</strong>
+                                <p>Atores difusos | Sem atribuição clara | Proxies | Plausible deniability | Sem "IP" para retaliar</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #475569;">
+                            <strong style="color: #fbbf24;">ERRO DE RUBIO:</strong> Inimigo identificável — assume que adversário tem rosto, endereço, estrutura vulnerável
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="osi-layer" onclick="toggleLayer(this)">
+                    <div class="layer-header">
+                        <div>
+                            <div class="layer-title">Camada 2 — Enlace</div>
+                            <div style="font-size: 0.9em; color: #94a3b8; margin-top: 5px;">Data Link Layer</div>
+                        </div>
+                        <span class="mismatch-moderate">MODERADO</span>
+                    </div>
+                    <div class="layer-details">
+                        <div class="grid-2">
+                            <div>
+                                <strong style="color: #ef4444;">LEGACY:</strong>
+                                <p>C2 centralizado | Infraestrutura fixa | Dependência de bases | Comunicação rígida</p>
+                            </div>
+                            <div>
+                                <strong style="color: #22c55e;">DISTRIBUTED:</strong>
+                                <p>Mesh networks | RF descartável | Enlaces efêmeros | Frequency hopping | ELRS</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #475569;">
+                            <strong style="color: #fbbf24;">ERRO DE RUBIO:</strong> Dependência de infraestrutura — acredita que negar bases/comunicação paralisa adversário
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="osi-layer" onclick="toggleLayer(this)">
+                    <div class="layer-header">
+                        <div>
+                            <div class="layer-title">Camada 1 — Física</div>
+                            <div style="font-size: 0.9em; color: #94a3b8; margin-top: 5px;">Physical Layer</div>
+                        </div>
+                        <span class="mismatch-critical">CRÍTICO</span>
+                    </div>
+                    <div class="layer-details">
+                        <div class="grid-2">
+                            <div>
+                                <strong style="color: #ef4444;">LEGACY:</strong>
+                                <p>Porta-aviões ($13,3B) | Blindados ($15M) | Bases fixas | Caças ($80M) | Fragatas ($500M)</p>
+                            </div>
+                            <div>
+                                <strong style="color: #22c55e;">DISTRIBUTED:</strong>
+                                <p>Drones FPV ($800) | Sensores civis ($50) | Fab labs ($10k) | Componentes COTS | Impressoras 3D</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #475569;">
+                            <strong style="color: #fbbf24;">ERRO DE RUBIO:</strong> Fetiche por plataformas — assume que grandeza física = poder militar
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h4>Diagnóstico Sistêmico</h4>
+                <p>O <strong>adaptador ideológico</strong> (Rubio) traduziu realidade material (camadas 1-3) para política externa (camada 7) usando filtros de Guerra Fria. Resultado: <em>semantic mismatch</em> — as camadas não conversam.</p>
+                <p class="citation">"É como tentar rodar aplicação RESTful em protocolo SOAP com tradutor XML quebrado."</p>
+            </div>
+        </section>
+        
+        <section id="rubio">
+            <h2>3. O Fator Rubio: Trauma como Política Externa</h2>
+            
+            <h3>Perfil Ideológico</h3>
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>Background:</strong> Filho de imigrantes cubanos fugindo de Castro (1956)</li>
+                    <li><strong>Formação:</strong> Anticomunismo como identidade fundacional</li>
+                    <li><strong>Worldview:</strong> Mundo dividido em regimes vs aliados, eixo moral claro</li>
+                    <li><strong>Toolkit:</strong> Sanções, bloqueios, pressão econômica, moralização</li>
+                    <li><strong>Blind spot:</strong> Assume que Estados funcionam como Cuba de 1960 — centralizados, dependentes, intimidáveis</li>
+                </ul>
+            </div>
+            
+            <h3>Histórico de Acertos e Erros</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4 style="color: #22c55e;">Onde Rubio Acertou (1960-1990)</h4>
+                    <ul style="font-size: 0.95em;">
+                        <li>✓ Bloqueio de Cuba funcionou parcialmente</li>
+                        <li>✓ Sanções à URSS tiveram impacto real</li>
+                        <li>✓ Pressão econômica acelerou colapso 1989-1991</li>
+                        <li>✓ Estados centralizados eram vulneráveis</li>
+                        <li>✓ Narrativa moral tinha peso geopolítico</li>
+                        <li>✓ Dissuas
